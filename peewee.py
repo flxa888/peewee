@@ -176,7 +176,8 @@ try:
 except ImportError:
     psycopg2 = None
 try:
-    import MySQLdb as mysql  # prefer the C module.
+    # import MySQLdb as mysql  # prefer the C module.
+    import mysql.connector as mysql
 except ImportError:
     try:
         import pymysql as mysql
